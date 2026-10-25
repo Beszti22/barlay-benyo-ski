@@ -72,6 +72,8 @@ const I18N = {
 
     "services.video.eyebrow": "Bepillantás",
     "services.video.title": "Szerviz élőben, a műhelyből",
+    "services.video.subtitle": "Minden léc kézzel, odafigyeléssel készül el — így néz ki közelről.",
+    "services.video.cta": "Időpontfoglalás",
 
     "gallery.eyebrow": "Egy pillantás a raktárra",
     "gallery.title": "Felszerelésünk",
@@ -203,6 +205,8 @@ const I18N = {
 
     "services.video.eyebrow": "A peek inside",
     "services.video.title": "The service, live from the workshop",
+    "services.video.subtitle": "Every pair is finished by hand, with care — this is what it looks like up close.",
+    "services.video.cta": "Book an appointment",
 
     "gallery.eyebrow": "A look at our stock",
     "gallery.title": "Our gear",
