@@ -163,7 +163,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--color-on-dark);
 }
 .hero-media { position: absolute; inset: 0; z-index: 0; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hero-media img { width: 100%; height: 116%; margin-top: -8%; object-fit: cover; object-position: center 30%; }
 .hero-media::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(26,26,24,0.35) 0%, rgba(26,26,24,0.55) 55%, rgba(26,26,24,0.88) 100%);
@@ -308,11 +308,68 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Only hide [data-reveal] content once JS confirms it can reveal it again —
    keeps content visible for no-JS browsers and crawlers that don't scroll.
    html.js-reveal is added by an inline script in <head>, synchronously. */
-html.js-reveal [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity 500ms ease, transform 500ms ease; }
-html.js-reveal [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+html.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px) scale(0.97);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.js-reveal [data-reveal].is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Staggered cascade for grid children — each card/testimonial/package/gallery
+   tile fades in slightly after the previous one, Apple-feature-grid style. */
+.card-grid .card:nth-child(2),
+.testimonial-grid .testimonial-card:nth-child(2),
+.card-grid-3 .pkg-card:nth-child(2),
+.gallery-grid .gallery-item:nth-child(2) { transition-delay: 90ms; }
+.card-grid .card:nth-child(3),
+.testimonial-grid .testimonial-card:nth-child(3),
+.card-grid-3 .pkg-card:nth-child(3),
+.gallery-grid .gallery-item:nth-child(3) { transition-delay: 180ms; }
+.card-grid-3 .pkg-card:nth-child(4),
+.testimonial-grid .testimonial-card:nth-child(4),
+.gallery-grid .gallery-item:nth-child(4) { transition-delay: 270ms; }
+.card-grid-3 .pkg-card:nth-child(5),
+.testimonial-grid .testimonial-card:nth-child(5),
+.gallery-grid .gallery-item:nth-child(5) { transition-delay: 360ms; }
+.testimonial-grid .testimonial-card:nth-child(6),
+.gallery-grid .gallery-item:nth-child(6) { transition-delay: 450ms; }
+
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
   .nav-links { transition: none !important; }
+}
+
+/* ---------- Apple-style scroll-driven motion (progressive enhancement) ----------
+   Native CSS scroll-driven animations where supported (Chrome/Edge 115+, Safari 26+).
+   Purely decorative, so unsupported browsers (Firefox) simply keep the static layout —
+   no JS fallback needed. */
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+  .hero { view-timeline: --hero-tl; }
+
+  @keyframes hero-parallax { to { transform: translateY(8%); } }
+  .hero-media img {
+    animation: hero-parallax linear both;
+    animation-timeline: --hero-tl;
+    animation-range: cover 0% cover 100%;
+  }
+
+  @keyframes hero-content-fade { to { opacity: 0; transform: translateY(-36px); } }
+  .hero-content {
+    animation: hero-content-fade linear both;
+    animation-timeline: --hero-tl;
+    animation-range: cover 0% cover 55%;
+  }
+
+  @keyframes photo-settle { from { scale: 1.1; } to { scale: 1; } }
+  .about-portrait img {
+    animation: photo-settle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 90%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-media img, .hero-content, .about-portrait img { animation: none; }
+  }
 }
 
 /* ---------- Equipment gallery ---------- */
