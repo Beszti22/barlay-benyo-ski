@@ -38,7 +38,13 @@ const I18N = {
 
     "testimonials.eyebrow": "Vélemények",
     "testimonials.title": "Amit a vendégeink mondanak",
-    "testimonials.placeholder": "Hamarosan: valódi visszajelzések a Facebook és Instagram oldalunkról.",
+    "testimonials.source": "· Google-vélemény",
+    "testimonials.t1.quote": "„Mindig lehet rájuk számítani! Ajánlom! A legjobb!!!!”",
+    "testimonials.t2.quote": "„Gyors, alapos ügyintézés. Köszönöm.”",
+    "testimonials.t3.quote": "„Kedvesség és szakértelem!”",
+    "testimonials.t4.quote": "„A legjobbak! Segítőkészek, megbízhatóak.”",
+    "testimonials.t5.quote": "„Gyors, megbízható, precíz. Mindenkinek ajánlom!”",
+    "testimonials.t6.quote": "„Olcsóbb, mint a Decathlon!”",
 
     "cta_banner.title": "Készen álltok a szezonra?",
     "cta_banner.body": "Foglaljatok időpontot felszerelés bérlésére vagy szervizre — Barlay és Benyó személyesen intézi.",
@@ -160,7 +166,13 @@ const I18N = {
 
     "testimonials.eyebrow": "Reviews",
     "testimonials.title": "What our guests say",
-    "testimonials.placeholder": "Coming soon: real reviews from our Facebook and Instagram pages.",
+    "testimonials.source": "· Google review",
+    "testimonials.t1.quote": "“You can always count on them! Highly recommend — the best!!!!”",
+    "testimonials.t2.quote": "“Fast, thorough service. Thank you.”",
+    "testimonials.t3.quote": "“Friendly and knowledgeable!”",
+    "testimonials.t4.quote": "“The best! Helpful and reliable.”",
+    "testimonials.t5.quote": "“Fast, reliable, precise. I recommend them to everyone!”",
+    "testimonials.t6.quote": "“Cheaper than Decathlon!”",
 
     "cta_banner.title": "Ready for the season?",
     "cta_banner.body": "Book a time for gear rental or a service — Barlay and Benyó handle it personally.",

@@ -229,11 +229,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 860px) { .service-row, .service-row:nth-child(even) { grid-template-columns: 1fr; direction: ltr; } }
 
 /* ---------- Testimonials ---------- */
-.testimonial-placeholder {
-  border: 1px dashed var(--color-border); border-radius: var(--radius-lg);
-  padding: var(--space-xl); text-align: center; color: var(--color-muted-foreground);
-  background: var(--color-card);
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+@media (max-width: 960px) { .testimonial-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial-card {
+  background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  padding: var(--space-lg); box-shadow: var(--shadow-sm);
+  transition: box-shadow 200ms ease, transform 200ms ease;
 }
+.testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.testimonial-card .stars { color: var(--color-ember); letter-spacing: 0.1em; margin-bottom: var(--space-sm); font-size: 1rem; }
+.testimonial-card p:not(.testimonial-author) { color: var(--color-ink); font-style: italic; }
+.testimonial-author { margin: 0; font-weight: 700; font-size: 0.9rem; color: var(--color-muted-foreground); }
+.testimonial-author span { font-weight: 400; }
 
 /* ---------- CTA banner ---------- */
 .cta-banner { background: var(--color-ember); color: #fff; padding: var(--space-2xl) 0; text-align: center; }
