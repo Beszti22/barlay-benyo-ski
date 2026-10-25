@@ -346,18 +346,22 @@ html.js-reveal [data-reveal].is-visible { opacity: 1; transform: translateY(0) s
 @supports ((animation-timeline: view()) and (animation-range: entry)) {
   .hero { view-timeline: --hero-tl; }
 
+  /* "exit" (not "cover") because .hero sits flush with the top of the page —
+     its "cover" range is already partly elapsed at scroll position 0, which
+     left the hero text faded out from the very first paint. "exit" only
+     starts progressing once the hero actually begins scrolling away. */
   @keyframes hero-parallax { to { transform: translateY(8%); } }
   .hero-media img {
     animation: hero-parallax linear both;
     animation-timeline: --hero-tl;
-    animation-range: cover 0% cover 100%;
+    animation-range: exit 0% exit 100%;
   }
 
   @keyframes hero-content-fade { to { opacity: 0; transform: translateY(-36px); } }
   .hero-content {
     animation: hero-content-fade linear both;
     animation-timeline: --hero-tl;
-    animation-range: cover 0% cover 55%;
+    animation-range: exit 0% exit 60%;
   }
 
   @keyframes photo-settle { from { scale: 1.1; } to { scale: 1; } }
