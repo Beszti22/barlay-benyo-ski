@@ -376,6 +376,27 @@ html.js-reveal [data-reveal].is-visible { opacity: 1; transform: translateY(0) s
   }
 }
 
+/* ---------- Workshop video duo ---------- */
+.video-duo { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+@media (max-width: 760px) { .video-duo { grid-template-columns: 1fr; } }
+.video-tile {
+  position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-md); aspect-ratio: 4 / 5; background: var(--color-ink);
+}
+.video-tile video {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1) contrast(1.05);
+}
+.video-tile .video-caption {
+  position: absolute; left: 0; right: 0; bottom: 0; margin: 0;
+  padding: var(--space-md) var(--space-md) var(--space-sm);
+  background: linear-gradient(0deg, rgba(26,26,24,0.75) 0%, rgba(26,26,24,0) 100%);
+  color: var(--color-on-dark); font-weight: 600; font-size: 0.9rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .video-tile video { filter: grayscale(1); }
+}
+
 /* ---------- Equipment gallery ---------- */
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
 @media (max-width: 760px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }

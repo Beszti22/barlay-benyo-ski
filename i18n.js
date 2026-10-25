@@ -70,6 +70,11 @@ const I18N = {
     "services.service.title": "Síszerviz",
     "services.service.body": "Élezés, waxolás, talpfeltöltés és kötésbeállítás — két egykori versenyző szemével. Minden léc egyedi odafigyelést kap, nem futószalagon készül.",
 
+    "services.video.eyebrow": "Bepillantás",
+    "services.video.title": "Szerviz élőben, a műhelyből",
+    "services.video.clip1": "Élezés kézi szerszámmal",
+    "services.video.clip2": "Kötésbeállítás közelről",
+
     "gallery.eyebrow": "Egy pillantás a raktárra",
     "gallery.title": "Felszerelésünk",
     "gallery.subtitle": "Sí, hódeszka, bakancs és sisak — mind karbantartva, bérlésre készen.",
@@ -197,6 +202,11 @@ const I18N = {
     "services.service.eyebrow": "Service",
     "services.service.title": "Ski service",
     "services.service.body": "Edge tuning, waxing, base repair and binding adjustment — seen through the eyes of two former racers. Every pair gets individual attention, not assembly-line treatment.",
+
+    "services.video.eyebrow": "A peek inside",
+    "services.video.title": "The service, live from the workshop",
+    "services.video.clip1": "Edge tuning by hand",
+    "services.video.clip2": "Binding adjustment, up close",
 
     "gallery.eyebrow": "A look at our stock",
     "gallery.title": "Our gear",

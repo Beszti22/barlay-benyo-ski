@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* Background workshop videos — pause looping autoplay for users who prefer reduced motion */
+  const bgVideos = document.querySelectorAll(".video-tile video");
+  if (bgVideos.length) {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      bgVideos.forEach(v => { v.removeAttribute("autoplay"); v.pause(); });
+    }
+  }
+
   /* Scroll reveal */
   const revealEls = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window && revealEls.length) {
