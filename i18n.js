@@ -70,9 +70,6 @@ const I18N = {
     "services.service.title": "Síszerviz",
     "services.service.body": "Élezés, waxolás, talpfeltöltés és kötésbeállítás — két egykori versenyző szemével. Minden léc egyedi odafigyelést kap, nem futószalagon készül.",
 
-    "services.video.eyebrow": "Bepillantás",
-    "services.video.title": "Szerviz élőben, a műhelyből",
-    "services.video.subtitle": "Minden léc kézzel, odafigyeléssel készül el — így néz ki közelről.",
     "services.video.cta": "Időpontfoglalás",
 
     "gallery.eyebrow": "Egy pillantás a raktárra",
@@ -203,9 +200,6 @@ const I18N = {
     "services.service.title": "Ski service",
     "services.service.body": "Edge tuning, waxing, base repair and binding adjustment — seen through the eyes of two former racers. Every pair gets individual attention, not assembly-line treatment.",
 
-    "services.video.eyebrow": "A peek inside",
-    "services.video.title": "The service, live from the workshop",
-    "services.video.subtitle": "Every pair is finished by hand, with care — this is what it looks like up close.",
     "services.video.cta": "Book an appointment",
 
     "gallery.eyebrow": "A look at our stock",
