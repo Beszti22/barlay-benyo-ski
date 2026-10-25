@@ -64,6 +64,16 @@ const I18N = {
     "services.service.title": "Síszerviz",
     "services.service.body": "Élezés, waxolás, talpfeltöltés és kötésbeállítás — két egykori versenyző szemével. Minden léc egyedi odafigyelést kap, nem futószalagon készül.",
 
+    "gallery.eyebrow": "Egy pillantás a raktárra",
+    "gallery.title": "Felszerelésünk",
+    "gallery.subtitle": "Sí, hódeszka, bakancs és sisak — mind karbantartva, bérlésre készen.",
+    "gallery.img.skiswall": "Síléc sor a Barlay Benyó Ski raktárában",
+    "gallery.img.bootsshelf": "Sícipők polcon a kölcsönzőben",
+    "gallery.img.helmetsrack": "Sisakok rendszerezve a falon",
+    "gallery.img.bootscloseup": "Sícipő kapcsok közelről",
+    "gallery.img.bootsrow": "Sícipők sorban, bérlésre készen",
+    "gallery.img.skissnowboards": "Sílécek és hódeszkák egymás mellett",
+
     "services.packages.eyebrow": "Válassz csomagot",
     "services.packages.title": "Bérlési és szerviz csomagok",
 
@@ -175,6 +185,16 @@ const I18N = {
     "services.service.eyebrow": "Service",
     "services.service.title": "Ski service",
     "services.service.body": "Edge tuning, waxing, base repair and binding adjustment — seen through the eyes of two former racers. Every pair gets individual attention, not assembly-line treatment.",
+
+    "gallery.eyebrow": "A look at our stock",
+    "gallery.title": "Our gear",
+    "gallery.subtitle": "Skis, snowboards, boots and helmets — all maintained and ready to rent.",
+    "gallery.img.skiswall": "Row of skis in the Barlay Benyó Ski storeroom",
+    "gallery.img.bootsshelf": "Ski boots on a shelf in the rental shop",
+    "gallery.img.helmetsrack": "Helmets organized on the wall",
+    "gallery.img.bootscloseup": "Close-up of ski boot buckles",
+    "gallery.img.bootsrow": "Ski boots lined up, ready to rent",
+    "gallery.img.skissnowboards": "Skis and snowboards side by side",
 
     "services.packages.eyebrow": "Choose a package",
     "services.packages.title": "Rental & service packages",

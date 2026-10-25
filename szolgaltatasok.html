@@ -66,6 +66,49 @@
     </div>
   </section>
 
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header center" data-reveal>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Egy pillantás a raktárra</p>
+        <h2 data-i18n="gallery.title">Felszerelésünk</h2>
+        <p data-i18n="gallery.subtitle" style="font-size:1.1rem;">Sí, hódeszka, bakancs és sisak — mind karbantartva, bérlésre készen.</p>
+      </div>
+      <div class="gallery-grid" data-reveal>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-skis-wall.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-skis-wall-sm.webp" alt="" data-i18n-attr="alt:gallery.img.skiswall" loading="lazy">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-boots-shelf.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-boots-shelf-sm.webp" alt="" data-i18n-attr="alt:gallery.img.bootsshelf" loading="lazy">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-helmets-rack.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-helmets-rack-sm.webp" alt="" data-i18n-attr="alt:gallery.img.helmetsrack" loading="lazy">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-boots-closeup.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-boots-closeup-sm.webp" alt="" data-i18n-attr="alt:gallery.img.bootscloseup" loading="lazy">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-boots-row.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-boots-row-sm.webp" alt="" data-i18n-attr="alt:gallery.img.bootsrow" loading="lazy">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox-trigger data-full="assets/gallery-skis-snowboards.webp" aria-label="Kép megnyitása nagyban">
+          <img src="assets/gallery-skis-snowboards-sm.webp" alt="" data-i18n-attr="alt:gallery.img.skissnowboards" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Kép nagyítva">
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Előző kép">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+    <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Következő kép">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Bezárás">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
   <section class="section section-alt">
     <div class="container">
       <div class="section-header center" data-reveal>

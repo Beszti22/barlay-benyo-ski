@@ -51,6 +51,48 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach(el => el.classList.add("is-visible"));
   }
 
+  /* Gallery lightbox */
+  const triggers = Array.from(document.querySelectorAll("[data-lightbox-trigger]"));
+  const lightbox = document.getElementById("lightbox");
+  if (triggers.length && lightbox) {
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("lightbox-close");
+    const prevBtn = document.getElementById("lightbox-prev");
+    const nextBtn = document.getElementById("lightbox-next");
+    let current = 0;
+
+    const show = (i) => {
+      current = (i + triggers.length) % triggers.length;
+      const t = triggers[current];
+      lightboxImg.src = t.getAttribute("data-full");
+      lightboxImg.alt = t.querySelector("img") ? t.querySelector("img").alt : "";
+    };
+    const open = (i) => {
+      show(i);
+      lightbox.classList.add("is-open");
+      document.body.classList.add("lightbox-open");
+      closeBtn.focus();
+    };
+    const close = () => {
+      lightbox.classList.remove("is-open");
+      document.body.classList.remove("lightbox-open");
+      lightboxImg.src = "";
+      triggers[current].focus();
+    };
+
+    triggers.forEach((t, i) => t.addEventListener("click", () => open(i)));
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", () => show(current - 1));
+    nextBtn.addEventListener("click", () => show(current + 1));
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(current - 1);
+      else if (e.key === "ArrowRight") show(current + 1);
+    });
+  }
+
   /* Contact form — currently logs locally; wire to /api/contact (Resend) once deployed */
   const form = document.querySelector("#contact-form");
   if (form) {
