@@ -21,11 +21,11 @@ const I18N = {
     "trust.workshop": "Saját műhely, kézi munka",
 
     "about.eyebrow": "A Barlay Benyó mögött",
-    "about.title": "Szia, Barlay és Benyó vagyunk",
-    "about.body1": "Régen együtt síeltünk — aztán úgy döntöttünk, hogy amit a hegyen és a pályán megtanultunk a felszerelésről, azt átadjuk másoknak is. Így született meg 2019-ben a Barlay Benyó Ski.",
-    "about.body2": "Tudjuk, milyen érzés, amikor egy jól beállított léc egyszerűen viszi az embert, és azt is, mennyire el tud rontani egy napot egy életlen él vagy egy rosszul beállított kötés. Ezért minden lécet úgy szervizelünk, mintha a sajátunk lenne.",
-    "about.body3": "A kölcsönzőben pedig olyan felszerelést adunk ki, amit mi magunk is szívesen felvennénk — legyen szó egy hétvégi alpesi kiruccanásról vagy egy hódeszkás napról a hegyen.",
-    "about.names": "Barlay & Benyó — alapítók",
+    "about.title": "Két budapesti srác, egy közös álom",
+    "about.body1": "Barlay Kristóf életművész, vitorlázó és vállalkozó, Benyó Marcell pedig profi síversenyző, síszakértő és a sport elkötelezett szerelmese — és egy nap úgy döntöttek, összefognak.",
+    "about.body2": "Teljes erőbedobással hozták létre saját prémium síkölcsönzőjüket a MOM Park felett, hogy mindenki ugyanazt a figyelmet és szakértelmet kapja a felszereléséhez, amit mi magunk is elvárnánk.",
+    "about.body3": "A sztori még csak most kezdődik, de a cél világos: olyan felszerelést és szervizt adni, amire mi magunk is büszkék lennénk.",
+    "about.names": "Barlay Kristóf & Benyó Marcell — alapítók",
 
     "services_teaser.eyebrow": "Amiben segítünk",
     "services_teaser.title": "Kölcsönzés és szerviz, egy helyen",
@@ -149,11 +149,11 @@ const I18N = {
     "trust.workshop": "Our own workshop, hand finished",
 
     "about.eyebrow": "Behind Barlay Benyó",
-    "about.title": "Hi, we're Barlay and Benyó",
-    "about.body1": "We used to ski together — and at some point decided to pass on what the mountain and the race course taught us about gear. That's how Barlay Benyó Ski was born in 2019.",
-    "about.body2": "We know how it feels when a well-tuned ski simply carries you, and how much a dull edge or a badly set binding can ruin a day. So every pair gets serviced the way we'd service our own.",
-    "about.body3": "In the rental shop, we only hand out gear we'd happily wear ourselves — whether it's a weekend trip to the Alps or a day on a snowboard.",
-    "about.names": "Barlay & Benyó — founders",
+    "about.title": "Two guys from Budapest, one shared dream",
+    "about.body1": "Barlay Kristóf is a jack-of-all-trades, sailor and entrepreneur; Benyó Marcell is a former competitive ski racer, ski expert and devoted lover of the sport — and one day the two decided to join forces.",
+    "about.body2": "They poured everything into building their own premium ski rental shop above MOM Park, so every guest gets the same care and expertise we'd want for our own gear.",
+    "about.body3": "The story is only just beginning, but the goal is clear: gear and service good enough that we'd be proud of it ourselves.",
+    "about.names": "Barlay Kristóf & Benyó Marcell — founders",
 
     "services_teaser.eyebrow": "What we help with",
     "services_teaser.title": "Rental and service, in one place",
