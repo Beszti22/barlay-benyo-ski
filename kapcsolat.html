@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu" data-i18n-page-title="meta.contact.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapcsolat — Barlay Benyó Ski</title>
+<meta name="description" content="Foglalj időpontot felszerelés bérlésére vagy szervizre. Barlay Benyó Ski — Budapest, MOM Park felett.">
+<link rel="icon" href="assets/logo-dark-tiny.webp" type="image/webp">
+<script>document.documentElement.classList.add("js-reveal");</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Ugrás a tartalomra</a>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/logo-main.webp" alt="">
+      Barlay Benyó Ski
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">Rólunk</a>
+      <a href="szolgaltatasok.html" data-i18n="nav.services">Szolgáltatások</a>
+      <a href="kapcsolat.html" data-i18n="nav.contact">Kapcsolat</a>
+      <a href="kapcsolat.html" class="btn btn-primary nav-cta-mobile" data-i18n="nav.book">Időpontfoglalás</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Nyelv váltása / Switch language">
+        <span data-i18n="nav.lang">HU</span>
+      </button>
+      <a href="kapcsolat.html" class="btn btn-primary nav-cta-desktop" data-i18n="nav.book">Időpontfoglalás</a>
+      <button class="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section" style="padding-top: var(--space-2xl);">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Lépj kapcsolatba</p>
+        <h1 data-i18n="contact.title">Időpontfoglalás</h1>
+        <p data-i18n="contact.subtitle" style="font-size:1.1rem;">Mesélj a felszerelésedről vagy arról, mit szeretnél bérelni — hamarosan válaszolunk az egyeztetéshez.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form id="contact-form" data-reveal novalidate>
+          <div class="honeypot" aria-hidden="true">
+            <label for="_gotcha">Leave this field empty</label>
+            <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-field">
+            <label for="name" data-i18n="form.name">Név</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email" data-i18n="form.email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="phone" data-i18n="form.phone">Telefon (opcionális)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-field">
+            <label for="service" data-i18n="form.service">Szolgáltatás</label>
+            <select id="service" name="service">
+              <option value="" data-i18n="form.service.default">Még nem tudom</option>
+              <option value="rental" data-i18n="form.service.rental">Felszerelés bérlés</option>
+              <option value="service_basic" data-i18n="form.service.service_basic">Alapszerviz</option>
+              <option value="service_premium" data-i18n="form.service.service_premium">Prémium szerviz</option>
+              <option value="binding" data-i18n="form.service.binding">Kötésbeállítás</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message" data-i18n="form.message">Üzenet</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <label class="form-consent">
+            <input type="checkbox" required>
+            <span data-i18n="form.consent">Hozzájárulok, hogy a Barlay Benyó Ski ezeket az adatokat a megkeresésem megválaszolásához felhasználja.</span>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="form.submit">Küldés</button>
+        </form>
+
+        <div class="info-card" data-reveal>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.5 13 7 22l5-3 5 3-1.5-9"/></svg>
+            <div>
+              <strong data-i18n="info.name">Név</strong>
+              <span data-i18n="info.name.value">Barlay &amp; Benyő</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6.3 6.3l1.1-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+            <div>
+              <strong data-i18n="info.phone">Telefon</strong>
+              <a href="#" data-site="phoneHref" data-site-text>+36 30 000 0000</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.8-.1-.2 0-.3.1-.5l.3-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.6 2.5 3.9 3.5.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
+            <div>
+              <strong data-i18n="info.whatsapp">WhatsApp</strong>
+              <a href="#" data-site="whatsapp" target="_blank" rel="noopener">+36 30 000 0000</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+            <div>
+              <strong data-i18n="info.email">Email</strong>
+              <a href="#" data-site="email" data-site-text>info@barlaybenyo.com</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.4 7-12a7 7 0 1 0-14 0c0 4.6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div>
+              <strong data-i18n="info.location">Helyszín</strong>
+              <span data-i18n="info.location.value">Vas Gereben utca 9/a, Budapest, 1124 (MOM Park felett)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">
+          <img src="assets/logo-main.webp" alt="">
+          Barlay Benyó Ski
+        </a>
+        <p data-i18n="footer.tagline">Síkölcsönzés és síszerviz két egykori versenyzőtől — Budapest, MOM Park felett.</p>
+        <div class="footer-social">
+          <a href="#" data-site="facebook" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="#" data-site="instagram" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-h" data-i18n="footer.quicklinks">Gyorslinkek</p>
+        <ul>
+          <li><a href="index.html#about" data-i18n="nav.about">Rólunk</a></li>
+          <li><a href="szolgaltatasok.html" data-i18n="nav.services">Szolgáltatások</a></li>
+          <li><a href="kapcsolat.html" data-i18n="nav.contact">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h" data-i18n="footer.services">Szolgáltatások</p>
+        <ul>
+          <li><a href="szolgaltatasok.html#rental" data-i18n="pkg.rental_daily.title">Napi bérlés</a></li>
+          <li><a href="szolgaltatasok.html#service" data-i18n="pkg.service_basic.title">Alapszerviz</a></li>
+          <li><a href="szolgaltatasok.html#service" data-i18n="pkg.service_premium.title">Prémium szerviz</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h" data-i18n="footer.contact">Kapcsolat</p>
+        <ul>
+          <li><a href="#" data-site="email" data-site-text>info@barlaybenyo.com</a></li>
+          <li><a href="#" data-site="phoneHref" data-site-text>+36 30 000 0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Barlay Benyó Ski. <span data-i18n="footer.rights">Minden jog fenntartva.</span></span>
+      <a href="https://beszterczey.com/" target="_blank" rel="noopener">
+        <span data-i18n="footer.madeby">Készítette: Beszterczey Web</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<aside aria-label="WhatsApp gyorskapcsolat">
+<a class="whatsapp-float" data-site="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.8-.1-.2 0-.3.1-.5l.3-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.6 2.5 3.9 3.5.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
+</a>
+</aside>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
