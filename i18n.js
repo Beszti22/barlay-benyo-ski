@@ -15,6 +15,7 @@ const I18N = {
     "hero.subtitle": "Síkölcsönzés és hódeszkabérlés, valamint precíz élezés-waxolás — egy budapesti műhelyben, 2019 óta.",
     "hero.cta.rent": "Felszerelés bérlése",
     "hero.cta.service": "Szerviz időpont",
+    "hero.image_alt": "Barlay Kristóf és Benyó Marcell kezet fognak a Barlay Benyó Ski műhely bejárata előtt",
 
     "trust.est": "Alapítva 2019-ben",
     "trust.racers": "Két egykori versenyző síelő",
@@ -145,6 +146,7 @@ const I18N = {
     "hero.subtitle": "Ski and snowboard rental, plus precise edge tuning and waxing — from a Budapest workshop, since 2019.",
     "hero.cta.rent": "Rent gear",
     "hero.cta.service": "Book a service",
+    "hero.image_alt": "Barlay Kristóf and Benyó Marcell shaking hands outside the Barlay Benyó Ski workshop",
 
     "trust.est": "Founded in 2019",
     "trust.racers": "Two former racing skiers",
