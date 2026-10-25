@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* Background workshop videos — pause looping autoplay for users who prefer reduced motion */
-  const bgVideos = document.querySelectorAll(".video-tile video");
+  const bgVideos = document.querySelectorAll(".video-banner video, .video-tile video");
   if (bgVideos.length) {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) {

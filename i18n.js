@@ -72,8 +72,6 @@ const I18N = {
 
     "services.video.eyebrow": "Bepillantás",
     "services.video.title": "Szerviz élőben, a műhelyből",
-    "services.video.clip1": "Élezés kézi szerszámmal",
-    "services.video.clip2": "Kötésbeállítás közelről",
 
     "gallery.eyebrow": "Egy pillantás a raktárra",
     "gallery.title": "Felszerelésünk",
@@ -205,8 +203,6 @@ const I18N = {
 
     "services.video.eyebrow": "A peek inside",
     "services.video.title": "The service, live from the workshop",
-    "services.video.clip1": "Edge tuning by hand",
-    "services.video.clip2": "Binding adjustment, up close",
 
     "gallery.eyebrow": "A look at our stock",
     "gallery.title": "Our gear",
