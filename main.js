@@ -102,6 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* WhatsApp float: fade it out while a form field is focused so it never sits on
+     top of the input the user is typing into (notably the message textarea's
+     bottom-right corner on narrow/mobile viewports). */
+  const whatsappFloat = document.querySelector(".whatsapp-float");
+  const formFields = document.querySelectorAll(".form-field input, .form-field textarea, .form-field select");
+  if (whatsappFloat && formFields.length) {
+    formFields.forEach(field => {
+      field.addEventListener("focus", () => whatsappFloat.classList.add("is-dimmed"));
+      field.addEventListener("blur", () => whatsappFloat.classList.remove("is-dimmed"));
+    });
+  }
+
   /* Contact form — currently logs locally; wire to /api/contact (Resend) once deployed */
   const form = document.querySelector("#contact-form");
   if (form) {

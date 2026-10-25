@@ -403,10 +403,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: fixed; bottom: 20px; right: 20px; z-index: 150;
   width: 56px; height: 56px; border-radius: 50%; background: var(--color-whatsapp);
   display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);
-  transition: transform 200ms ease;
+  transition: transform 200ms ease, opacity 200ms ease, visibility 200ms ease;
 }
 .whatsapp-float:hover { transform: scale(1.06); }
 .whatsapp-float svg { width: 28px; height: 28px; color: #fff; }
+/* While a form field has focus (mobile keyboard open), fade the float out of the
+   way so it doesn't sit on top of the input being typed into — e.g. the bottom-right
+   corner of the message textarea on the contact page. */
+.whatsapp-float.is-dimmed {
+  opacity: 0; visibility: hidden; transform: scale(0.8); pointer-events: none;
+}
+@media (max-width: 480px) {
+  .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .whatsapp-float svg { width: 25px; height: 25px; }
+}
 
 /* ---------- Form ---------- */
 .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-2xl); align-items: start; }
