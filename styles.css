@@ -47,6 +47,19 @@ body {
   color: var(--color-ink);
   background: var(--color-paper);
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Faint, fixed film-grain texture — a quiet premium/tactile finish across
+   the whole page rather than a flat digital fill. Decorative only. */
+body::after {
+  content: "";
+  position: fixed; inset: 0; z-index: 999; pointer-events: none;
+  opacity: 0.025; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: reduce), (max-width: 480px) {
+  body::after { display: none; }
 }
 
 h1, h2, h3, h4 {
@@ -163,10 +176,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--color-on-dark);
 }
 .hero-media { position: absolute; inset: 0; z-index: 0; }
-.hero-media img { width: 100%; height: 116%; margin-top: -8%; object-fit: cover; object-position: center 30%; }
+/* Object-position keeps both founders' faces anchored near the top of the
+   frame (low Y%) so the bottom-aligned text column below never climbs into
+   face territory, whatever the viewport height. On narrow/mobile widths the
+   X anchor shifts left-of-center, since a tall narrow crop of a wide
+   two-person photo otherwise centers on the handshake and clips both faces. */
+.hero-media img { width: 100%; height: 116%; margin-top: -8%; object-fit: cover; object-position: center 16%; }
+@media (max-width: 640px) {
+  .hero-media img { object-position: 38% 12%; }
+}
 .hero-media::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(26,26,24,0.35) 0%, rgba(26,26,24,0.55) 55%, rgba(26,26,24,0.88) 100%);
+  background: linear-gradient(180deg, rgba(26,26,24,0.22) 0%, rgba(26,26,24,0.3) 38%, rgba(26,26,24,0.62) 68%, rgba(26,26,24,0.92) 100%);
+}
+.hero-media::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: radial-gradient(ellipse 120% 70% at 50% 100%, rgba(26,26,24,0.5) 0%, transparent 60%);
 }
 .hero-content { position: relative; z-index: 1; padding: var(--space-3xl) 0 var(--space-2xl); width: 100%; }
 .hero-content .eyebrow { color: #E8C9A8; }
@@ -241,10 +266,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* ---------- Trust strip ---------- */
-.trust-strip { background: var(--color-ink); color: var(--color-on-dark); padding: var(--space-lg) 0; }
-.trust-strip .container { display: flex; flex-wrap: wrap; gap: var(--space-lg); justify-content: space-between; }
-.trust-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; flex: 1 1 220px; }
-.trust-item svg { flex-shrink: 0; width: 22px; height: 22px; color: var(--color-ember); }
+.trust-strip { background: var(--color-ink); color: var(--color-on-dark); padding: var(--space-lg) 0; position: relative; overflow: hidden; }
+.trust-strip::before {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 42px);
+  pointer-events: none;
+}
+.trust-strip .container { position: relative; display: flex; flex-wrap: wrap; gap: var(--space-lg); justify-content: space-between; }
+.trust-item { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 0.95rem; flex: 1 1 220px; }
+.trust-item .trust-icon {
+  flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(168,87,31,0.16); border: 1px solid rgba(168,87,31,0.4);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 200ms ease, transform 200ms ease;
+}
+.trust-item:hover .trust-icon { background: rgba(168,87,31,0.3); transform: scale(1.06); }
+.trust-item svg { flex-shrink: 0; width: 19px; height: 19px; color: var(--color-ember); }
 
 /* ---------- Sections ---------- */
 .section { padding: var(--space-3xl) 0; }
@@ -268,11 +305,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card {
   background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
   padding: var(--space-xl) var(--space-lg); box-shadow: var(--shadow-sm);
-  transition: box-shadow 200ms ease, transform 200ms ease;
-  display: flex; flex-direction: column;
+  transition: box-shadow 260ms ease, transform 260ms ease, border-color 260ms ease;
+  display: flex; flex-direction: column; position: relative; overflow: hidden;
 }
-.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.card-icon { width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-paper-alt); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--color-slate); }
+.card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--color-ember); transform: scaleY(0); transform-origin: top;
+  transition: transform 260ms cubic-bezier(0.16,1,0.3,1);
+}
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--color-border); }
+.card:hover::before { transform: scaleY(1); }
+.card-icon { width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-paper-alt); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--color-slate); transition: background 260ms ease, color 260ms ease, transform 260ms ease; }
+.card:hover .card-icon { background: var(--color-ember); color: #fff; transform: scale(1.06); }
 .card-icon svg { width: 26px; height: 26px; }
 .card p { color: var(--color-muted-foreground); flex-grow: 1; }
 
@@ -300,17 +344,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 640px) { .testimonial-grid { grid-template-columns: 1fr; } }
 .testimonial-card {
   background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
-  padding: var(--space-lg); box-shadow: var(--shadow-sm);
-  transition: box-shadow 200ms ease, transform 200ms ease;
+  padding: var(--space-lg); box-shadow: var(--shadow-sm); position: relative;
+  transition: box-shadow 260ms ease, transform 260ms ease, border-color 260ms ease;
 }
-.testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.testimonial-card::after {
+  content: "”"; position: absolute; top: 2px; right: var(--space-md);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 3.4rem; line-height: 1;
+  color: var(--color-paper-alt); z-index: 0; pointer-events: none;
+}
+.testimonial-card > * { position: relative; z-index: 1; }
+.testimonial-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--color-ember); }
 .testimonial-card .stars { color: var(--color-ember); letter-spacing: 0.1em; margin-bottom: var(--space-sm); font-size: 1rem; }
 .testimonial-card p:not(.testimonial-author) { color: var(--color-ink); font-style: italic; }
 .testimonial-author { margin: 0; font-weight: 700; font-size: 0.9rem; color: var(--color-muted-foreground); }
 .testimonial-author span { font-weight: 400; }
 
 /* ---------- CTA banner ---------- */
-.cta-banner { background: var(--color-ember); color: #fff; padding: var(--space-2xl) 0; text-align: center; }
+.cta-banner {
+  background:
+    radial-gradient(ellipse 80% 140% at 85% -20%, rgba(255,255,255,0.14) 0%, transparent 55%),
+    linear-gradient(155deg, var(--color-ember) 0%, var(--color-ember-dark) 100%);
+  color: #fff; padding: var(--space-2xl) 0; text-align: center; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 36px);
+  pointer-events: none;
+}
+.cta-banner .container { position: relative; }
 .cta-banner h2 { color: #fff; }
 .cta-banner p { color: #F6E4D4; max-width: 50ch; margin-left: auto; margin-right: auto; }
 .cta-banner .btn-outline-light { border-color: #fff; color: #fff; }
