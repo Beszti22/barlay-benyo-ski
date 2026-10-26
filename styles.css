@@ -178,12 +178,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-media { position: absolute; inset: 0; z-index: 0; }
 /* Object-position keeps both founders' faces anchored near the top of the
    frame (low Y%) so the bottom-aligned text column below never climbs into
-   face territory, whatever the viewport height. On narrow/mobile widths the
-   X anchor shifts left-of-center, since a tall narrow crop of a wide
-   two-person photo otherwise centers on the handshake and clips both faces. */
+   face territory, whatever the viewport height. */
 .hero-media img { width: 100%; height: 116%; margin-top: -8%; object-fit: cover; object-position: center 16%; }
 @media (max-width: 640px) {
-  .hero-media img { object-position: 38% 12%; }
+  /* A full 100dvh-tall hero on a narrow phone makes object-fit:cover crop
+     the wide two-founder photo down to roughly a quarter of its width —
+     enough to fit one person, cutting the other almost entirely out of
+     frame. Shortening the hero on mobile widens that visible slice enough
+     to keep both founders in shot, centered on the pair rather than on
+     just one of them. */
+  .hero { min-height: 58vh; }
+  .hero-media img { object-position: 50% 14%; }
 }
 .hero-media::after {
   content: ""; position: absolute; inset: 0;
